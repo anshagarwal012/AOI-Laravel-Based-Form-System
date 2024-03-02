@@ -15,7 +15,7 @@ use App\Http\Controllers\FrontendController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return redirect('/login');
 });
 
@@ -24,13 +24,19 @@ Route::controller(BackendController::class)->group(function () {
     Route::post('/login', 'login');
     Route::get('/logout', 'logout')->name('logout');
 
-    Route::get('/dashboard', 'dashboard');
-    Route::get('/diplomate-registration-form', 'diplomate-registration-form');
-    Route::get('/fellowship-registration-form', 'fellowship-registration-form');
-    Route::get('/membership-form', 'membership-form');
-    Route::get('/registration-form', 'registration-form');
+    Route::prefix('admin')->group(function () {
+        Route::get('/dashboard', 'dashboard');
+        Route::get('/diplomate-registration-form', 'diplomate_registration_form');
+        Route::get('/fellowship-registration-form', 'fellowship_registration_form');
+        Route::get('/membership-form', 'membership_form');
+        Route::get('/registration-form', 'registration_form');
+    });
 });
 
 Route::controller(FrontendController::class)->group(function () {
-    Route::get('/form', 'form_section');
+    Route::get('/', 'form_section');
+    Route::get('/diplomate-registration-form', 'diplomate_registration_form');
+    Route::get('/fellowship-registration-form', 'fellowship_registration_form');
+    Route::get('/membership-form', 'membership_form');
+    Route::get('/registration-form', 'registration_form');
 });

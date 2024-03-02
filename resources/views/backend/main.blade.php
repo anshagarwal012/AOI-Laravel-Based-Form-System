@@ -19,22 +19,27 @@
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
                                 <li class="nk-menu-item">
-                                    <a href="/diplomate-registration-form" class="nk-menu-link">
+                                    <a href="/admin/dashboard" class="nk-menu-link">
+                                        <span class="nk-menu-text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="/admin/diplomate-registration-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Diplomate Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/fellowship-registration-form" class="nk-menu-link">
+                                    <a href="/admin/fellowship-registration-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Fellowship Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/membership-form" class="nk-menu-link">
+                                    <a href="/admin/membership-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Membership Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/registration-form" class="nk-menu-link">
+                                    <a href="/admin/registration-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Registration Form</span>
                                     </a>
                                 </li>

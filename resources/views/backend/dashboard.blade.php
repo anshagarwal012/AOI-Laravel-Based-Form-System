@@ -1,4 +1,4 @@
 @section('title', 'Dashboard')
-@extends('main')
+@extends('backend.main')
 @section('content')
 @endsection
