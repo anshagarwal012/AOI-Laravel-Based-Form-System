@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackendController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\CashCounterController;
+use App\Http\Controllers\FrontendController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +24,7 @@ Route::controller(BackendController::class)->group(function () {
     Route::post('/login', 'login');
     Route::get('/logout', 'logout')->name('logout');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
-    
+});
+Route::controller(FrontendController::class)->group(function () {
+    Route::get('/form', 'form_section');
 });
