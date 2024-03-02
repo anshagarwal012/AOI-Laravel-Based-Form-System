@@ -12,6 +12,48 @@ use Validator;
 
 class BackendController extends Controller
 {
+    public function dashboard()
+    {
+        if ($this->check_login()) {
+            return view('backend.dashboard');
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Dashboard');
+        }
+    }
+    public function diplomate_registration_form()
+    {
+        if ($this->check_login()) {
+            return view('backend.diplomate_registration_form');
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Diplomate Registration Form');
+        }
+    }
+    public function fellowship_registration_form()
+    {
+        if ($this->check_login()) {
+            return view('backend.fellowship_registration_form');
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Fellowship Registration Form');
+        }
+    }
+    public function membership_form()
+    {
+        if ($this->check_login()) {
+            return view('backend.membership_form');
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Membership Form');
+        }
+    }
+    public function registration_form()
+    {
+        if ($this->check_login()) {
+            return view('backend.registration_form');
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
+        }
+    }
+
+
     public function showLoginForm()
     {
         if ($this->check_login()) {
@@ -42,14 +84,7 @@ class BackendController extends Controller
             return redirect()->route('login')->with('errors', 'User Not Found.');
         }
     }
-    public function dashboard()
-    {
-        if ($this->check_login()) {
-            return view('dashboard');
-        } else {
-            return redirect()->route('login')->with('errors', 'Login To Access Dashboard');
-        }
-    }
+
     public function users()
     {
         if ($this->check_login()) {
@@ -89,9 +124,6 @@ class BackendController extends Controller
         $input['password'] = bcrypt($input['password']);
         $input['role'] = "admin";
         $user = User::create($input);
-        transaction::create([
-            "user_id" => $user->id, "tx_id" => NULL, "subscription_end_date" => date('Y-m-d', strtotime(date('Y-m-d') . ' + 3 days'))
-        ]);
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
 

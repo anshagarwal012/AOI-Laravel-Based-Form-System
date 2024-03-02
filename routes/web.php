@@ -23,6 +23,10 @@ Route::controller(BackendController::class)->group(function () {
     Route::get('/login', 'showLoginForm')->name('login');
     Route::post('/login', 'login');
     Route::get('/logout', 'logout')->name('logout');
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
-    
+
+    Route::get('/dashboard', 'dashboard');
+    Route::get('/diplomate-registration-form', 'diplomate-registration-form');
+    Route::get('/fellowship-registration-form', 'fellowship-registration-form');
+    Route::get('/membership-form', 'membership-form');
+    Route::get('/registration-form', 'registration-form');
 });
