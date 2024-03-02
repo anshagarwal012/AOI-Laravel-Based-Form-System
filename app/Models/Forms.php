@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Forms extends Model
 {
     use HasFactory;
+    protected $fillable = ['form_type','form_data', 'created_at', 'updated_at'];
 }

@@ -7,11 +7,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Adminlogin;
 use App\Models\User;
-use App\Models\transaction;
+use App\Models\Forms;
 use Validator;
 
 class BackendController extends Controller
 {
+    public $data;
+
+    public function __construct(Request $res)
+    {
+        $type = basename($res->url());
+        $this->data = Forms::where('form_type',$type)->get();
+    }
+
     public function dashboard()
     {
         if ($this->check_login()) {
@@ -23,7 +31,7 @@ class BackendController extends Controller
     public function diplomate_registration_form()
     {
         if ($this->check_login()) {
-            return view('backend.diplomate_registration_form');
+            return view('backend.diplomate_registration_form')->with('data', $this->data);
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Diplomate Registration Form');
         }
@@ -31,7 +39,7 @@ class BackendController extends Controller
     public function fellowship_registration_form()
     {
         if ($this->check_login()) {
-            return view('backend.fellowship_registration_form');
+            return view('backend.fellowship_registration_form')->with('data', $this->data);
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Fellowship Registration Form');
         }
@@ -39,7 +47,7 @@ class BackendController extends Controller
     public function membership_form()
     {
         if ($this->check_login()) {
-            return view('backend.membership_form');
+            return view('backend.membership_form')->with('data', $this->data);
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Membership Form');
         }
@@ -47,7 +55,7 @@ class BackendController extends Controller
     public function registration_form()
     {
         if ($this->check_login()) {
-            return view('backend.registration_form');
+            return view('backend.registration_form')->with('data', $this->data);
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
         }
@@ -76,7 +84,7 @@ class BackendController extends Controller
             $password = $user->password;
             if ($credentials['password'] == $password) {
                 session(['login' => true]);
-                return redirect()->intended('/dashboard');
+                return redirect()->intended('/admin/dashboard');
             } else {
                 return redirect()->route('login')->with('errors', 'Invalid Password.')->withInput($request->only('username'));
             }
