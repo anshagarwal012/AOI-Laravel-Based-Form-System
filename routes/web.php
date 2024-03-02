@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackendController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\CashCounterController;
+use App\Http\Controllers\FrontendController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +29,8 @@ Route::controller(BackendController::class)->group(function () {
     Route::get('/fellowship-registration-form', 'fellowship-registration-form');
     Route::get('/membership-form', 'membership-form');
     Route::get('/registration-form', 'registration-form');
+});
+
+Route::controller(FrontendController::class)->group(function () {
+    Route::get('/form', 'form_section');
 });
