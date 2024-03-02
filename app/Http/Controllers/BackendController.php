@@ -29,9 +29,9 @@ class BackendController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('username', 'password');
-        $user = Adminlogin::where('user', $credentials['username'])->first();
+        $user = Adminlogin::where('email', $credentials['username'])->first();
         if ($user) {
-            $password = $user->pass;
+            $password = $user->password;
             if ($credentials['password'] == $password) {
                 session(['login' => true]);
                 return redirect()->intended('/dashboard');
