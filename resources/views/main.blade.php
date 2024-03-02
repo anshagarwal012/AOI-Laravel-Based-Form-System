@@ -19,23 +19,28 @@
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
                                 <li class="nk-menu-item">
-                                    <a href="{{ route('dashboard') }}" class="nk-menu-link">
+                                    <a href="/dashboard" class="nk-menu-link">
                                         <span class="nk-menu-text">Dashboard</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="{{ route('users.index') }}" class="nk-menu-link">
-                                        <span class="nk-menu-text">Users</span>
+                                    <a href="/diplomate-registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Diplomate Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="{{ route('banner') }}" class="nk-menu-link">
-                                        <span class="nk-menu-text">Banner</span>
+                                    <a href="/fellowship-registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Fellowship Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="{{ route('logout') }}" class="nk-menu-link">
-                                        <span class="nk-menu-text">Logout</span>
+                                    <a href="/membership-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Membership Form</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="/registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Registration Form</span>
                                     </a>
                                 </li>
                             </ul>
