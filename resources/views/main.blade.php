@@ -7,6 +7,7 @@
     <!-- StyleSheets  -->
     <link href="{{ asset('/css/webly.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/theme.css') }}" rel="stylesheet" id="skin-default">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="nk-body bg-lighter ">
@@ -14,8 +15,10 @@
         <div class="nk-wrap ">
             <div class="nk-header is-light">
                 <div class="container-fluid">
-                    <div class="nk-header-wrap">
-                        <div class="nk-header-brand"></div>
+                    <div class="nk-header-wrap pb-0">
+                        <div class="nk-header-brand">
+                            <img src="{{ asset('/images/logo.png') }}" width="80">
+                        </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
                                 <li class="nk-menu-item">
@@ -55,6 +58,8 @@
             <div class="nk-footer bg-white">
                 <div class="container-fluid">
                     <div class="nk-footer-wrap">
+                        <div class="nk-footer-copyright mx-auto"> © 2024 ... Designed &amp; Developed By <a href="https://www.weblytechnolab.com">Webly Technolab</a>
+                        </div>
                     </div>
                 </div>
             </div>
