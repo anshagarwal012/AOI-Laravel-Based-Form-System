@@ -138,7 +138,7 @@
                             </div>
                             <div class="col-md-10 pl-0">
                                 <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="AccompanyingPersonsProfessionname1"
+                                    <input type="text" class="form-control" name="AccompanyingPersonsProfessionname2"
                                         placeholder="Accompanying Persons 2">
                                 </div>
                             </div>
