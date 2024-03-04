@@ -17,7 +17,15 @@ class BackendController extends Controller
     public function __construct(Request $res)
     {
         $type = basename($res->url());
-        $this->data = Forms::where('form_type',$type)->get();
+        $results = Forms::select('form_data', 'id')
+            ->where('form_type', str_replace('-', '_', $type))
+            ->get();
+
+        $this->data = $results->map(function ($item) {
+            $da = json_decode($item->form_data);
+            $da->id = $item->id;
+            return $da;
+        });
     }
 
     public function dashboard()
@@ -55,6 +63,7 @@ class BackendController extends Controller
     public function registration_form()
     {
         if ($this->check_login()) {
+            // dd($this->data);
             return view('backend.registration_form')->with('data', $this->data);
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
@@ -100,69 +109,6 @@ class BackendController extends Controller
         } else {
             return redirect()->route('login')->with('errors', 'Login To Access Dashboard');
         }
-    }
-
-    // Users Crud
-    public function index()
-    {
-        $users = User::where('role', 'admin')->get();
-        return view('users.index', compact('users'));
-    }
-
-    public function create()
-    {
-        return view('users.create');
-    }
-
-    public function store(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email|unique:users',
-            'password' => 'required',
-            'name' => 'required',
-            'contact' => 'required',
-            'shop_name' => 'required',
-            'address' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return redirect()->route('users.create')->with('error', $validator->errors());
-        }
-
-        $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
-        $input['role'] = "admin";
-        $user = User::create($input);
-        return redirect()->route('users.index')->with('success', 'User created successfully.');
-    }
-
-    public function show(User $user)
-    {
-        $staff = User::where('admin_id', $user->id)->get();
-        return view('users.show', compact('user', 'staff'));
-    }
-
-    public function edit(User $user)
-    {
-        return view('users.edit', compact('user'));
-    }
-
-    public function update(Request $request, User $user)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $user->id,
-            'password' => 'nullable|min:6',
-        ]);
-
-        $user->update($request->all());
-        return redirect()->route('users.show', $user->id)->with('success', 'User updated successfully.');
-    }
-
-    public function destroy(User $user)
-    {
-        $user->delete();
-
-        return redirect()->route('users.index')->with('success', 'User deleted successfully.');
     }
 
     public function check_login()

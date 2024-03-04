@@ -34,9 +34,13 @@ Route::controller(BackendController::class)->group(function () {
 });
 
 Route::controller(FrontendController::class)->group(function () {
-    Route::get('/', 'form_section');
+    Route::get('/', function(){
+        return redirect('/registration-form');
+    });
     Route::get('/diplomate-registration-form', 'diplomate_registration_form');
     Route::get('/fellowship-registration-form', 'fellowship_registration_form');
     Route::get('/membership-form', 'membership_form');
     Route::get('/registration-form', 'registration_form');
+    Route::post('/form-sumbit', 'form_submit')->name('form_submit');
+    Route::get('/download-form/{id}', 'form_download');
 });

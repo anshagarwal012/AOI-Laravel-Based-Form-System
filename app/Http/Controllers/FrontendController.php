@@ -4,27 +4,82 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Forms;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Dompdf\Options;
+use Dompdf\Dompdf;
 
 class FrontendController extends Controller
 {
-    public function form_section()
-    {
-        return view('front.form_section');
-    }
-
     public function diplomate_registration_form()
     {
+        return view('front.diplomate_registration_form');
     }
-    
+
     public function fellowship_registration_form()
     {
+        return view('front.fellowship_registration_form');
     }
 
     public function membership_form()
     {
+        return view('front.membership_form');
     }
 
     public function registration_form()
     {
+        return view('front.registration_form');
+    }
+
+    public function form_submit(Request $request)
+    {
+        $data = $request->all();
+        $fdata = [];
+        $fdata['form_type'] = $data['form_type'];
+
+        $fileName = time() . '.' . $request->Upload_Photo->extension();
+        $request->Upload_Photo->move(public_path('uploads'), $fileName);
+
+        $data['Upload_Photo'] = $fileName;
+
+        unset($data['_token']);
+        $fdata['form_data'] = json_encode($data);
+        Forms::create($fdata);
+        return back()->with('success', 'Form Submitted successfully.');
+    }
+
+    public function form_download(Forms $id)
+    {
+        $data = ['data' => json_decode($id->form_data, true), 'type' => $id->form_type];
+        $html = view('reports.' . $id->form_type, $data)->render();
+
+        // Configure Dompdf options
+        $options = new Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $options->set('isRemoteEnabled', true);
+
+        // Instantiate Dompdf with options
+        $dompdf = new Dompdf($options);
+
+        // Load HTML content
+        $dompdf->loadHtml($html);
+
+        // Set paper size and orientation
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the PDF
+        $dompdf->render();
+
+        // Output the PDF content as a string
+        $pdfContent = $dompdf->output();
+
+        // Pass PDF content to the view for preview
+        return view('pdf.preview', ['pdfContent' => $pdfContent]);
+
+        // $dompdf = new Dompdf();
+        // $dompdf->loadHtml($html);
+        // $dompdf->setPaper('A4', 'portrait');
+        // $dompdf->render();
+        // return $dompdf->stream('form_'.$id->form_type.'_'.$id->id.'.pdf');
     }
 }
