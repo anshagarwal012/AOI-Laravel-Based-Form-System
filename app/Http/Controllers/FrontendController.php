@@ -44,8 +44,10 @@ class FrontendController extends Controller
 
         unset($data['_token']);
         $fdata['form_data'] = json_encode($data);
-        Forms::create($fdata);
-        return back()->with('success', 'Form Submitted successfully.');
+        $data = Forms::create($fdata);
+        // dd($data);
+        $this->form_download($data);
+        // return back()->with('success', 'Form Submitted successfully.');
     }
 
     public function form_download(Forms $id)
