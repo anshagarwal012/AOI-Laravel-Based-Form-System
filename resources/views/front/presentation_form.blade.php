@@ -1,4 +1,4 @@
-@section('title', 'Diplomate Registration Form')
+@section('title', ' Form')
 @extends('main')
 
 @section('content')
@@ -7,7 +7,7 @@
             <div class="card-inner card-inner-lg">
                 <div class="nk-block-head">
                     <div class="nk-block-head-content">
-                        <h5 class="nk-block-title">Diplomate Registration Form</h5>
+                        <h5 class="nk-block-title">Fellowship Registration Form</h5>
                         <div class="nk-block-des">
                             <p>Please Type/ Fill in Block Letters</p>
                         </div>
@@ -28,27 +28,43 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Tittle of the Presentation</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="address1" placeholder="Enter Address Line 1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Model of presentation</label>
                         <div class="row">
-                            <div class="col-md-2 pr-0">
-                                <div class="form-control-wrap">
-                                    <select name="AccompanyingPersonsProfession1" class="form-control">
-                                        <option value="Dr" selected>Dr.</option>
-                                        <option value="Mr">Mr.</option>
-                                        <option value="Ms">Ms.</option>
-                                    </select>
+                            <div class="col-auto">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck7Oral">
+                                    <label class="custom-control-label" for="customCheck7Oral">Oral</label>
                                 </div>
                             </div>
-                            <div class="col-md-10 pl-0">
-                                <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="AccompanyingPersonsProfessionname1"
-                                        placeholder="Name">
+                            <div class="col-auto">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck7Poster">
+                                    <label class="custom-control-label" for="customCheck7Poster">Poster</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Address</label>
+                        <label class="form-label">Name of the author</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="address1" placeholder="Enter Address Line 1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">AOI Membership Number</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="AOIMembershipNumber"
+                                placeholder="Enter AOI Membership Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Designation(please specificy)</label>
                         <div class="form-control-wrap">
                             <input type="text" class="form-control" name="address1" placeholder="Enter Address Line 1">
                         </div>
@@ -73,6 +89,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="address1" placeholder="Enter Address Line 1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label class="form-label">City</label>
                         <div class="form-control-wrap">
                             <input type="text" class="form-control" name="City" placeholder="Enter City">
@@ -94,14 +117,32 @@
                     <div class="form-group">
                         <label class="form-label">Email</label>
                         <div class="form-control-wrap">
-                            <input type="phone" class="form-control" name="Email" placeholder="Enter Email">
+                            <input type="mail" class="form-control" name="Email" placeholder="Enter Email">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">AOI Membership Number</label>
+                        <label class="form-label">Name of the C0-authors(for poster only)</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="AOIMembershipNumber"
-                                placeholder="Enter AOI Membership Number">
+                            <input type="mail" class="form-control" name="Email" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Name of</label>
+                        <div class="row">
+                            <div class="col-md-4 pr-0">
+                                <div class="form-control-wrap">
+                                    <select name="name_inst_hos" class="form-control">
+                                        <option value="Institution" selected>Institution</option>
+                                        <option value="Hospital">Hospital</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8 pl-0">
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control" name="institution_name"
+                                        placeholder="Enter Name">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">

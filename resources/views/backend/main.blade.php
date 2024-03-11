@@ -42,6 +42,11 @@
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
+                                    <a href="/admin/presntation-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Presntation Form</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
                                     <a href="/admin/registration-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Registration Form</span>
                                     </a>
@@ -63,7 +68,8 @@
             <div class="nk-footer bg-white">
                 <div class="container-fluid">
                     <div class="nk-footer-wrap">
-                        <div class="nk-footer-copyright mx-auto"> © 2024 ... Designed &amp; Developed By <a href="https://www.weblytechnolab.com">Webly Technolab</a>
+                        <div class="nk-footer-copyright mx-auto"> © 2024 ... Designed &amp; Developed By <a
+                                href="https://www.weblytechnolab.com">Webly Technolab</a>
                         </div>
                     </div>
                 </div>

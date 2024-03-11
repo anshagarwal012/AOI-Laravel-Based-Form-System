@@ -30,6 +30,10 @@ class FrontendController extends Controller
     {
         return view('front.registration_form');
     }
+    public function presentation_form()
+    {
+        return view('front.presentation_form');
+    }
 
     public function form_submit(Request $request)
     {
@@ -80,12 +84,12 @@ class FrontendController extends Controller
         header('Content-Type: application/pdf');
         $options = new Options();
         $options->set('isPhpRemoteEnabled', true);
-        
+
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        
+
         $pdfContent = $dompdf->output();
         $filePath = public_path('forms/form_' . $id->form_type . '_' . $id->id . '.pdf');
         file_put_contents($filePath, $pdfContent);
