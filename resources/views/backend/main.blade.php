@@ -42,8 +42,8 @@
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/admin/presntation-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Presntation Form</span>
+                                    <a href="/admin/presentation-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Presentation Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
