@@ -1,4 +1,4 @@
-@section('title', 'Diplomate Registration Form')
+@section('title', ' presentation Form')
 @extends('main')
 
 @section('content')
@@ -7,7 +7,7 @@
             <div class="card-inner card-inner-lg">
                 <div class="nk-block-head">
                     <div class="nk-block-head-content">
-                        <h5 class="nk-block-title">Diplomate Registration Form</h5>
+                        <h5 class="nk-block-title">Presentation Form</h5>
                         <div class="nk-block-des">
                             <p>Please Type/ Fill in Block Letters</p>
                         </div>
@@ -28,29 +28,48 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Tittle of the Presentation</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="Tittle_Presentation"
+                                placeholder="Enter Presentation">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Model of presentation</label>
                         <div class="row">
-                            <div class="col-md-2 pr-0">
-                                <div class="form-control-wrap">
-                                    <select name="AccompanyingPersonsProfession1" class="form-control">
-                                        <option value="Dr" selected>Dr.</option>
-                                        <option value="Mr">Mr.</option>
-                                        <option value="Ms">Ms.</option>
-                                    </select>
+                            <div class="col-auto">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Oral" class="custom-control-input" id="customCheck7Oral"
+                                        name="model">
+                                    <label class="custom-control-label" for="customCheck7Oral">Oral</label>
                                 </div>
                             </div>
-                            <div class="col-md-10 pl-0">
-                                <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="AccompanyingPersonsProfessionname1"
-                                        placeholder="Name">
+                            <div class="col-auto">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Poster" class="custom-control-input"
+                                        id="customCheck7Poster" name="model">
+                                    <label class="custom-control-label" for="customCheck7Poster">Poster</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Address</label>
+                        <label class="form-label">Name of the author</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="address1" placeholder="Enter Address Line 1">
+                            <input type="text" class="form-control" name="Name_author" placeholder="Enter Name author">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">AOI Membership Number</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="AOIMembershipNumber"
+                                placeholder="Enter AOI Membership Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Designation(please specificy)</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="Designation" placeholder="Enter Designation">
                         </div>
                     </div>
                     <div class="form-group">
@@ -59,8 +78,7 @@
                             <div class="col-md-4 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="name_inst_hos" class="form-control">
-                                        <option value="Institution" selected>Institution</option>
-                                        <option value="Hospital">Hospital</option>
+                                        <option value="">Hospital</option>
                                     </select>
                                 </div>
                             </div>
@@ -72,6 +90,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="address" placeholder="Enter Address">
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label class="form-label">City</label>
                         <div class="form-control-wrap">
@@ -94,63 +119,36 @@
                     <div class="form-group">
                         <label class="form-label">Email</label>
                         <div class="form-control-wrap">
-                            <input type="phone" class="form-control" name="Email" placeholder="Enter Email">
+                            <input type="mail" class="form-control" name="Email" placeholder="Enter Email">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">AOI Membership Number</label>
+                        <label class="form-label">Name of the C0-authors(for poster only)</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="AOIMembershipNumber"
-                                placeholder="Enter AOI Membership Number">
+                            <input type="text" class="form-control" name="C0_authors" placeholder="Enter C0-authors">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Payment Method</label>
-                        <div class="form-control-wrap">
-                            <select name="payment_method" class="form-control">
-                                <option value="DD">DD</option>
-                                <option value="CHEQUE">CHEQUE</option>
-                                <option value="CASH">CASH</option>
-                                <option value="NEFT">NEFT (for Lucknow only)</option>
-                            </select>
+                        <label class="form-label">Name of</label>
+                        <div class="row">
+                            <div class="col-md-4 pr-0">
+                                <div class="form-control-wrap">
+                                    <select name="name_inst" class="form-control">
+                                        <option value="">Hospital</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8 pl-0">
+                                <div class="form-control-wrap">
+                                    <input type="text" class="form-control" name="hos_name" placeholder="Enter Name">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Draft/Cheque No.</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="DraftChequeNo"
-                                placeholder="Enter Draft/Cheque No.">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Payment Date</label>
-                        <div class="form-control-wrap">
-                            <input type="date" class="form-control" name="PaymentDate"
-                                placeholder="Enter Payment Date">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Bank Name</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="BankName" placeholder="Enter Bank Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">City Name</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="CityName" placeholder="Enter City Name">
-                        </div>
-                        <p>In Favour of Academy of Oral Implantology</p>
-                    </div>
-                    <div class="form-group">
-                        <h2 class="text-dark text-center">Academy of Oral Implantology</h2>
-                        <h4 class="text-dark text-center">Scan QR Code</h4>
-                        <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-lg btn-primary btn-block">Submit Form</button>
                     </div>
-                    <input type="hidden" name="form_type" value="registration_form">
+                    <input type="hidden" name="form_type" value="presentation_form">
                 </form>
             </div>
         </div>

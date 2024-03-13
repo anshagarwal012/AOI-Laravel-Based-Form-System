@@ -69,6 +69,15 @@ class BackendController extends Controller
             return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
         }
     }
+    public function presentation_form()
+    {
+        if ($this->check_login()) {
+            // dd($this->data);
+            return view('backend.presentation_form')->with('data', $this->data);
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
+        }
+    }
 
 
     public function showLoginForm()
