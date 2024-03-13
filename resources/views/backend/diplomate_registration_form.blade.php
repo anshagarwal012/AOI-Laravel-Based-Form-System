@@ -1,4 +1,4 @@
-@section('title', 'Registration Form')
+@section('title', '')
 @extends('backend.main')
 @section('content')
     <div class="nk-block">
