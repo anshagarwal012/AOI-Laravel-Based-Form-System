@@ -39,7 +39,8 @@
     }
 
     .tittle {
-        left top
+        left 233px;
+        top 100px;
     }
 
     .Model {
