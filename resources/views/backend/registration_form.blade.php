@@ -38,8 +38,7 @@
                                     <td>{{ $value->address1 ?? '' }}</td>
                                     <td>{{ $value->City ?? '' }}</td>
                                     <td>{{ $value->State ?? '' }}</td>
-                                    <td target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary"><a
-                                            Download></a></td>
+                                    <td ><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

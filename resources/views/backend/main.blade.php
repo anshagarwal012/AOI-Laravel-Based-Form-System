@@ -21,11 +21,11 @@
                         </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
-                                <li class="nk-menu-item">
+                                {{-- <li class="nk-menu-item">
                                     <a href="/admin/dashboard" class="nk-menu-link">
                                         <span class="nk-menu-text">Dashboard</span>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nk-menu-item">
                                     <a href="/admin/diplomate-registration-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Diplomate Registration Form</span>

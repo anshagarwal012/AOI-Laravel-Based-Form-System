@@ -74,6 +74,18 @@
     <!-- JavaScript -->
     <script src="{{ asset('/js/bundle.js') }}"></script>
     <script src="{{ asset('/js/scripts.js') }}"></script>
+    <script>
+        if($('[name="txn_id"]').length != 0){
+   $('button').attr('disabled',true)
+}
+$('[name="txn_id"]').on('keyup',function(){
+    if($(this).val().length == 0){
+        $('button').attr('disabled',true)
+    }else{
+        $('button').attr('disabled',false)
+    }
+})
+    </script>
 </body>
 
 </html>
