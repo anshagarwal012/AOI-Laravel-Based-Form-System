@@ -1,4 +1,4 @@
-@section('title', '')
+@section('title', 'Diplomate Registration Form')
 @extends('backend.main')
 @section('content')
     <div class="nk-block">
@@ -7,7 +7,7 @@
                 <div class="card-inner position-relative card-tools-toggle">
                     <div class="card-title-group">
                         <div class="nk-block-head-content">
-                            <h3 class="nk-block-title page-title">Registration Form</h3>
+                            <h3 class="nk-block-title page-title">Diplomate Registration Form</h3>
                         </div>
                     </div>
                 </div>
@@ -38,8 +38,7 @@
                                     <td>{{ $value->address1 ?? '' }}</td>
                                     <td>{{ $value->City ?? '' }}</td>
                                     <td>{{ $value->State ?? '' }}</td>
-                                    <td target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary"><a
-                                            Download></a></td>
+                                    <td ><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

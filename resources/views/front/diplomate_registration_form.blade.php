@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label class="form-label">Upload Photo</label>
                         <div class="form-control-wrap">
-                            <input type="file" class="form-control" name="Upload Photo">
+                            <input type="file" class="form-control" name="Upload Photo" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-md-10 pl-0">
                                 <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="AccompanyingPersonsProfessionname1"
+                                    <input type="text" class="form-control" name="Profession_name1"
                                         placeholder="Name">
                                 </div>
                             </div>
@@ -59,7 +59,6 @@
                             <div class="col-md-4 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="name_inst_hos" class="form-control">
-                                        <option value="Institution" selected>Institution</option>
                                         <option value="Hospital">Hospital</option>
                                     </select>
                                 </div>
@@ -145,12 +144,20 @@
                     <div class="form-group">
                         <h2 class="text-dark text-center">Academy of Oral Implantology</h2>
                         <h4 class="text-dark text-center">Scan QR Code</h4>
-                        <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
+                        <a href="upi://pay?pa=11487659@cbin&pn=ACADEMY%20OF%20ORAL%20IMPLAN&cu=INR&am=&mc=8021" target="_blank">
+                            <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Transaction Id</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="txn_id" placeholder="Enter Transaction Id">
+                        </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-lg btn-primary btn-block">Submit Form</button>
                     </div>
-                    <input type="hidden" name="form_type" value="registration_form">
+                    <input type="hidden" name="form_type" value="diplomate_registration_form">
                 </form>
             </div>
         </div>

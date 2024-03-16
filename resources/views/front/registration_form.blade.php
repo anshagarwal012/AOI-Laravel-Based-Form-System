@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label class="form-label">Upload Photo</label>
                         <div class="form-control-wrap">
-                            <input type="file" class="form-control" name="Upload Photo">
+                            <input type="file" class="form-control" required name="Upload Photo">
                         </div>
                     </div>
                     <div class="form-group">
@@ -35,8 +35,6 @@
                                     <select name="name_profession" id="" class="form-control">
                                         <option value="Prof">Prof.</option>
                                         <option value="Dr">Dr.</option>
-                                        <option value="Mr" selected>Mr.</option>
-                                        <option value="Ms">Ms.</option>
                                     </select>
                                 </div>
                             </div>
@@ -60,7 +58,6 @@
                             <div class="col-md-4 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="name_inst_hos" class="form-control">
-                                        <option value="Institution" selected>Institution</option>
                                         <option value="Hospital">Hospital</option>
                                     </select>
                                 </div>
@@ -112,9 +109,6 @@
                                 <div class="form-control-wrap">
                                     <select name="AccompanyingPersonsProfession1" class="form-control">
                                         <option value="Dr" selected>Dr.</option>
-                                        <option value="Mr">Mr.</option>
-                                        <option value="Mrs">Mrs.</option>
-                                        <option value="Ms">Ms.</option>
                                     </select>
                                 </div>
                             </div>
@@ -130,9 +124,6 @@
                                 <div class="form-control-wrap">
                                     <select name="AccompanyingPersonsProfession2" class="form-control">
                                         <option value="Dr" selected>Dr.</option>
-                                        <option value="Mr">Mr.</option>
-                                        <option value="Mrs">Mrs.</option>
-                                        <option value="Ms">Ms.</option>
                                     </select>
                                 </div>
                             </div>
@@ -185,7 +176,15 @@
                     <div class="form-group">
                         <h2 class="text-dark text-center">Academy of Oral Implantology</h2>
                         <h4 class="text-dark text-center">Scan QR Code</h4>
-                        <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
+                        <a href="upi://pay?pa=11487659@cbin&pn=ACADEMY%20OF%20ORAL%20IMPLAN&cu=INR&am=&mc=8021" target="_blank">
+                            <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Transaction Id</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="txn_id" placeholder="Enter Transaction Id">
+                        </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-lg btn-primary btn-block">Submit Form</button>

@@ -11,22 +11,16 @@
         page-break-after: always;
     }
 
-    @font-face {
-        font-family: 'Open Sans';
-        src: url({{ storage_path('fonts/OpenSans-Bold.ttf') }}) format("truetype");
-        font-weight: 400;
-        font-style: normal;
-    }
-
     .reports img {
-        width: 100%;
-        min-height: 100vh;
+        width: 210mm;
+        height: 297mm;
+        position: absolute;
     }
 
     html,
     body {
         margin: 0px;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans' !important;
     }
 
     .data {
@@ -34,126 +28,190 @@
     }
 
     p {
-        position: relative;
+        position: absolute;
+        z-index: 69;
+        text-wrap: nowrap;
     }
 
-    .shop_name {
-        left: 480px;
-        top: 80px;
-        font-size: 30px;
-        text-align: center;
+    .Upload_Photo {
+        left: 642px;
+        top: 240px;
     }
 
-    .entry_id {
-        left: 480px;
-        top: 50px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .name {
-        left: 130px;
-        top: 54px;
-    }
-
-    .mob {
-        left: 190px;
-        top: 45px;
-    }
-
-    .time {
-        left: 190px;
-        top: 30px;
-    }
-
-    .date {
-        left: 600px;
-        top: 105px;
-    }
-
-    .ptype {
-        left: 400px;
-        top: 140px;
-    }
-
-    .cname {
-        left: 400px;
-        top: 130px;
-    }
-
-    .mno {
-        left: 400px;
-        top: 122px;
-    }
-
-    .imei {
-        left: 400px;
-        top: 112px;
-    }
-
-    .problem {
-        left: 400px;
-        top: 105px;
-    }
-
-    .accessories {
-        left: 400px;
-        top: 95px;
-    }
-
-    .advance {
-        left: 600px;
-        top: 120px;
-    }
-
-    .Expences {
-        left: 600px;
-        top: 110px;
-    }
-
-    .Sname {
-        left: 220px;
-        top: 215px;
-    }
-
-    .email {
-        left: 220px;
-        top: 195px;
-    }
-
-    .address {
-        left: 220px;
-        top: 175px;
+    .Upload_Photo img {
+        width: 95px;
+        height: 111px;
     }
 </style>
+@php
+    $da = [
+        'images' => $data['Upload_Photo'],
+        'form_data' => [
+            [
+                'spacing' => '9.9px',
+                'top' => '239px',
+                'left' => '187px',
+                'data' => $data['Membership'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => '9.8px',
+                'top' => '263px',
+                'left' => '203px',
+                'data' => $data['AccompanyingPersonsProfession1'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => '9.5px',
+                'top' => '263px',
+                'left' => '255px',
+                'data' => $data['AccompanyingPersonsProfessionname1'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '317px',
+                'left' => '520px',
+                'data' => $data['datebirth'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '346px',
+                'left' => '250px',
+                'data' => $data['address1'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '373px',
+                'left' => '270px',
+                'data' => $data['address2'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '455px',
+                'left' => '320px',
+                'data' => $data['institution_name'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '455px',
+                'left' => '148px',
+                'data' => $data['courses'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '402px',
+                'left' => '155px',
+                'data' => $data['Sno'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['State'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '518px',
+                'left' => '289px',
+                'data' => $data['others'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['Telephone'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['city'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['State2'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['MobileNumber'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '518px',
+                'left' => '289px',
+                'data' => $data['Email'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['AOIMembershipNumber'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '486px',
+                'left' => '330px',
+                'data' => $data['AccompanyingPersonsProfession1'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '518px',
+                'left' => '289px',
+                'data' => $data['Accompanying_1'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '518px',
+                'left' => '289px',
+                'data' => $data['AccompanyingPersonsProfession2'] ?? '',
+                'type' => 'text',
+            ],
+            [
+                'spacing' => 'normal',
+                'top' => '518px',
+                'left' => '289px',
+                'data' => $data['Accompanying_2'] ?? '',
+                'type' => 'text',
+            ],
+        ],
+    ];
+@endphp
 
 <body>
-    @foreach ($data as $key => $value)
-        <div class="data">
-            <p class="shop_name">{{ $value['shop_name'] }}</p>
-            <p class="entry_id">{{ $value['entry_id'] }}</p>
-            <p class="name">{{ $value['name'] }}</p>
-            <p class="mob">{{ $value['mob'] }}</p>
-            <p class="time">{{ $value['time'] }}</p>
-            <p class="date">{{ $value['date'] }}</p>
-            <p class="ptype">{{ $value['ptype'] }}</p>
-            <p class="cname">{{ $value['cname'] }}</p>
-            <p class="mno">{{ $value['mno'] }}</p>
-            <p class="imei">{{ $value['imei'] }}</p>
-            <p class="problem">{{ $value['problem'] }}</p>
-            <p class="accessories">{{ $value['accessories'] }}</p>
-            <p class="advance">{{ $value['advance'] }}</p>
-            <p class="Expences">{{ $value['Expences'] }}</p>
-            <p class="Sname">{{ $value['Sname'] }}</p>
-            <p class="email">{{ $value['email'] }}</p>
-            <p class="address">{{ $value['address'] }}</p>
-        </div>
-        <div class="reports"><img src="{{ public_path('/reports/BSM_REPAIR.png') }}" alt=""></div>
-        @if (count($data) - 1 > $key)
-            <div class="page-break"></div>
-        @endif
-    @endforeach
-    {{-- <div class="reports"><img src="/reports/BSM_REPAIR.png" alt=""></div> --}}
+    <div class="data">
+        @foreach ($da['form_data'] as $item)
+            <p style="top:{{ $item['top'] }};left:{{ $item['left'] }};letter-spacing:{{ $item['spacing'] }}">
+                {{ $item['data'] }}</p>
+        @endforeach
+        <p class="Upload_Photo">
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('uploads/' . $da['images']))) }}">
+        </p>
+    </div>
+    <div class="reports">
+        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('reports/' . $type . '.jpg'))) }} ">
+    </div>
+    {{-- <div class="page-break"></div> --}}
 </body>
 
 </html>

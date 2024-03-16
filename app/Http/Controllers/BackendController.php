@@ -83,7 +83,7 @@ class BackendController extends Controller
     public function showLoginForm()
     {
         if ($this->check_login()) {
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/registration-form');
         }
         return view('auth.login');
     }

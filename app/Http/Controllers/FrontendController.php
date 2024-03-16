@@ -57,35 +57,13 @@ class FrontendController extends Controller
     public function form_download(Forms $id)
     {
         $data = ['data' => json_decode($id->form_data, true), 'type' => $id->form_type];
-        $html = view('reports.' . $id->form_type, $data)->render();
+        return $html = view('reports.' . $id->form_type, $data)->render();
 
-        // // Configure Dompdf options
-        // $options = new Options();
-        // $options->set('isHtml5ParserEnabled', true);
-        // $options->set('isRemoteEnabled', true);
-
-        // // Instantiate Dompdf with options
-        // $dompdf = new Dompdf($options);
-
-        // // Load HTML content
-        // $dompdf->loadHtml($html);
-
-        // // Set paper size and orientation
-        // $dompdf->setPaper('A4', 'portrait');
-
-        // // Render the PDF
-        // $dompdf->render();
-
-        // // Output the PDF content as a string
-        // $pdfContent = $dompdf->output();
-
-        // // Pass PDF content to the view for preview
-        // return view('pdf.preview', ['pdfContent' => $pdfContent]);
         header('Content-Type: application/pdf');
-        $options = new Options();
-        $options->set('isPhpRemoteEnabled', true);
+        // $options = new Options();
+        // $options->set('isPhpRemoteEnabled', true);
 
-        $dompdf = new Dompdf($options);
+        $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
@@ -93,10 +71,6 @@ class FrontendController extends Controller
         $pdfContent = $dompdf->output();
         $filePath = public_path('forms/form_' . $id->form_type . '_' . $id->id . '.pdf');
         file_put_contents($filePath, $pdfContent);
-        // return view('pdf.preview', ['pdfContent' => $pdfContent]);
-
         return readFile($filePath);
-
-        // return $dompdf->stream('form_'.$id->form_type.'_'.$id->id.'.pdf');
     }
 }
