@@ -17,12 +17,13 @@
                         <tr class="nk-tb-item nk-tb-head">
                             <th class="nk-tb-col tb-col-mb sorting_desc"><span class="sub-text">Serial No.</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Photo</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Name</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Email</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Mobile</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Membership</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Accompanying Persons Profession Name</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Date of Birth</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Address</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">City</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">State</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Hospital Name</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Courses</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">S.no</span></th>
                             <th class="nk-tb-col nk-tb-col-tools text-end">Action</th>
                         </tr>
                     </thead>
@@ -33,14 +34,13 @@
                             <td><img src="{{ '../uploads/' . ($value->Upload_Photo ?? '') }}" width="60"></td>
                             {{-- <td>{{ $key+1 }}</td> --}}
                             <td>{{ $value->Membership ?? '' }}</td>
-                            <td>{{ $value->AccompanyingPersonsProfession1 ?? '' }}</td>
                             <td>{{ $value->AccompanyingPersonsProfessionname1 ?? '' }}</td>
-                            <td>{{ $value->PaymentDate ?? '' }}</td>
+                            <td>{{ $value->datebirth ?? '' }}</td>
                             <td>{{ $value->address1 ?? '' }}</td>
-                            <td>{{ $value->address2 ?? '' }}</td>
-                            <td>{{ $value->name_inst_hos ?? '' }}</td>
                             <td>{{ $value->institution_name ?? '' }}</td>
-                            <td ><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
+                            <td>{{ $value->courses ?? '' }}</td>
+                            <td>{{ $value->Sno ?? '' }}</td>
+                            <td><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
                         </tr>
                         @endforeach
                     </tbody>

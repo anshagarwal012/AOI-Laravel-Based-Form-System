@@ -35,12 +35,12 @@
 
     .Upload_Photo {
         left: 633px;
-        top: 380px;
+        top: 257px;
     }
 
     .Upload_Photo img {
-        width: 140px;
-        height: 155px;
+        width: 137px;
+        height: 170px;
     }
 </style>
 @php
@@ -55,13 +55,16 @@
             ],
             ['top' => '341px', 'left' => '262px', 'data' => $data['Profession_name1'] ?? '', 'type' => 'text'],
             ['top' => '374px', 'left' => '152px', 'data' => $data['address1'] ?? '', 'type' => 'text'],
-            ['top' => '317px', 'left' => '520px', 'data' => $data['name_inst_hos'] ?? '', 'type' => 'text'],
             ['top' => '441px', 'left' => '302px', 'data' => $data['institution_name'] ?? '', 'type' => 'text'],
             ['top' => '475px', 'left' => '167px', 'data' => $data['City'] ?? '', 'type' => 'text'],
             ['top' => '474px', 'left' => '395px', 'data' => $data['State'] ?? '', 'type' => 'text'],
             ['top' => '509px', 'left' => '148px', 'data' => $data['MobileNumber'] ?? '', 'type' => 'text'],
             ['top' => '542px', 'left' => '143px', 'data' => $data['Email'] ?? '', 'type' => 'text'],
             ['top' => '577px', 'left' => '241px', 'data' => $data['AOIMembershipNumber'] ?? '', 'type' => 'text'],
+            ['top' => '767px', 'left' => '484px', 'data' => $data['DraftChequeNo'] ?? '', 'type' => 'text'],
+            ['top' => '767px', 'left' => '607px', 'data' => $data['PaymentDate'] ?? '', 'type' => 'text'],
+            ['top' => '805px', 'left' => '456px', 'data' => $data['BankName'] ?? '', 'type' => 'text'],
+            ['top' => '824px', 'left' => '438px', 'data' => $data['CityName'] ?? '', 'type' => 'text'],
         ],
     ];
 @endphp

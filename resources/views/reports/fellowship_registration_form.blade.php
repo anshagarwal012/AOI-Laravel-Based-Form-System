@@ -61,6 +61,10 @@
             ['top' => '506px', 'left' => '143px', 'data' => $data['MobileNumber'] ?? '', 'type' => 'text'],
             ['top' => '540px', 'left' => '138px', 'data' => $data['Email'] ?? '', 'type' => 'text'],
             ['top' => '574px', 'left' => '236px', 'data' => $data['AOIMembershipNumber'] ?? '', 'type' => 'text'],
+            ['top' => '767px', 'left' => '460px', 'data' => $data['DraftChequeNo'] ?? '', 'type' => 'text'],
+            ['top' => '767px', 'left' => '588px', 'data' => $data['PaymentDate'] ?? '', 'type' => 'text'],
+            ['top' => '805px', 'left' => '432px', 'data' => $data['BankName'] ?? '', 'type' => 'text'],
+            ['top' => '824px', 'left' => '416px', 'data' => $data['CityName'] ?? '', 'type' => 'text'],
         ],
     ];
 @endphp
