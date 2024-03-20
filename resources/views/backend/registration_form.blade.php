@@ -23,6 +23,7 @@
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">Address</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">City</span></th>
                                 <th class="nk-tb-col tb-col-mb"><span class="sub-text">State</span></th>
+                                <th class="nk-tb-col tb-col-mb"><span class="sub-text">Tnx id</span></th>
                                 <th class="nk-tb-col nk-tb-col-tools text-end">Action</th>
                             </tr>
                         </thead>
@@ -38,7 +39,9 @@
                                     <td>{{ $value->address1 ?? '' }}</td>
                                     <td>{{ $value->City ?? '' }}</td>
                                     <td>{{ $value->State ?? '' }}</td>
-                                    <td ><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
+                                    <td>{{ $value->txn_id ?? '' }}</td>
+                                    <td><a target="_blank" href="/download-form/{{ $value->id }}"
+                                            class="btn btn-primary">Download</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
