@@ -57,6 +57,9 @@ class FrontendController extends Controller
     public function form_download(Forms $id)
     {
         $data = ['data' => json_decode($id->form_data, true), 'type' => $id->form_type];
+        // return view('reports.' . $id->form_type, $data);
+        // exit;
+
         $html = view('reports.' . $id->form_type, $data)->render();
 
         header('Content-Type: application/pdf');
