@@ -17,12 +17,13 @@
                         <tr class="nk-tb-item nk-tb-head">
                             <th class="nk-tb-col tb-col-mb sorting_desc"><span class="sub-text">Serial No.</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Photo</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Name</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Email</span></th>
-                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Mobile</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Profession Name</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Address</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Hospital Name</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">City</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">State</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Mobile Number</span></th>
+                            <th class="nk-tb-col tb-col-mb"><span class="sub-text">Email</span></th>
                             <th class="nk-tb-col nk-tb-col-tools text-end">Action</th>
                         </tr>
                     </thead>
@@ -32,16 +33,14 @@
                             <td>{{ $key + 1 }}</td>
                             <td><img src="{{ '../uploads/' . ($value->Upload_Photo ?? '') }}" width="60"></td>
                             {{-- <td>{{ $key+1 }}</td> --}}
+                            <td>{{ $value->Profession_name1 ?? '' }}</td>
+                            <td>{{ $value->address1 ?? '' }}</td>
+                            <td>{{ $value->institution_name ?? '' }}</td>
+                            <td>{{ $value->City ?? '' }}</td>
                             <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td>{{ $value->State ?? '' }}</td>
-                            <td ><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
+                            <td>{{ $value->MobileNumber ?? '' }}</td>
+                            <td>{{ $value->Email ?? '' }}</td>
+                            <td><a target="_blank" href="/download-form/{{ $value->id }}" class="btn btn-primary">Download</a></td>
                         </tr>
                         @endforeach
                     </tbody>
