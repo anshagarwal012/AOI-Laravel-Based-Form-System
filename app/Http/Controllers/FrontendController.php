@@ -51,7 +51,7 @@ class FrontendController extends Controller
         $data = Forms::create($fdata);
         // dd($data);
         $this->form_download($data);
-        // return back()->with('success', 'Form Submitted successfully.');
+        return back()->with('success', 'Form Submitted successfully.');
     }
 
     public function form_download(Forms $id)
