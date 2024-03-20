@@ -30,7 +30,7 @@
     p {
         position: absolute;
         z-index: 69;
-        width:500px;
+        width: 500px;
     }
 
     .Upload_Photo {
