@@ -82,6 +82,25 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="form-label">Preffered address for correspondence</label>
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="office" class="custom-control-input" id="customCheck7Oral"
+                                        name="model">
+                                    <label class="custom-control-label" for="customCheck7Oral">office</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Residency" class="custom-control-input"
+                                        id="customCheck7Poster" name="model">
+                                    <label class="custom-control-label" for="customCheck7Poster">Residency</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="form-label">Name of</label>
                         <div class="row">
                             <div class="col-md-4 pr-0">

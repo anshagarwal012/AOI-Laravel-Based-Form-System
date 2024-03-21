@@ -30,7 +30,7 @@
     p {
         position: absolute;
         z-index: 69;
-        width:500px;
+        width: 500px;
     }
 
     .Upload_Photo {
@@ -81,7 +81,11 @@
     <div class="reports">
         <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('reports/' . $type . '.jpg'))) }} ">
     </div>
-    {{-- <div class="page-break"></div> --}}
+    <div class="page-break"></div>
+    <div class="reports">
+        <img
+            src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('reports/' . $type . '_back.jpg'))) }} ">
+    </div>
 </body>
 
 </html>
