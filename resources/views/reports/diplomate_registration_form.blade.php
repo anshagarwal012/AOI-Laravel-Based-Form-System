@@ -30,17 +30,17 @@
     p {
         position: absolute;
         z-index: 69;
-        width:500px;
+        width: 500px;
     }
 
     .Upload_Photo {
-        left: 633px;
-        top: 257px;
+        left: 630px;
+        top: 255px;
     }
 
     .Upload_Photo img {
-        width: 137px;
-        height: 170px;
+        width: 140px;
+        height: 171px;
     }
 </style>
 @php
@@ -48,7 +48,7 @@
         'images' => $data['Upload_Photo'],
         'form_data' => [
             [
-                'top' => '341px',
+                'top' => '340px',
                 'left' => '237px',
                 'data' => $data['AccompanyingPersonsProfession1'] ?? '',
                 'type' => 'text',
@@ -81,7 +81,11 @@
     <div class="reports">
         <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('reports/' . $type . '.jpg'))) }} ">
     </div>
-    {{-- <div class="page-break"></div> --}}
+    <div class="page-break"></div>
+    <div class="reports">
+        <img
+            src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('reports/' . $type . '_back.jpg'))) }} ">
+    </div>
 </body>
 
 </html>

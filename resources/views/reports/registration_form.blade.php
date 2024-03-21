@@ -13,7 +13,7 @@
 
     .reports img {
         width: 210mm;
-        height: 297mm;
+        height: 299mm;
         position: absolute;
     }
 
@@ -30,7 +30,7 @@
     p {
         position: absolute;
         z-index: 69;
-        width:500px;
+        width: 500px;
     }
 
     .Upload_Photo {
