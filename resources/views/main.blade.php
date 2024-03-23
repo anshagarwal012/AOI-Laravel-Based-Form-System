@@ -56,6 +56,24 @@
                     <div class="nk-content-inner">
                         <div class="nk-content-body">
                             @yield('content')
+                            <div class="modal fade" id="imageEditorModal" tabindex="-1" role="dialog" aria-labelledby="imageEditorModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="imageEditorModalLabel">Image Editor</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="file" class="form-control" id="uploadInput" accept="image/*">
+                                            <div id="canvas-container">
+                                                <canvas id="canvas" width="200" height="200"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" class="btn btn-primary" id="saveBtn" value="Upload">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,18 +91,54 @@
     </div>
     <!-- JavaScript -->
     <script src="{{ asset('/js/bundle.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
     <script src="{{ asset('/js/scripts.js') }}"></script>
     <script>
-        if($('[name="txn_id"]').length != 0){
-   $('button').attr('disabled',true)
-}
-$('[name="txn_id"]').on('keyup',function(){
-    if($(this).val().length == 0){
-        $('button').attr('disabled',true)
-    }else{
-        $('button').attr('disabled',false)
-    }
-})
+        if ($('[name="txn_id"]').length != 0) {
+            $('button').attr('disabled', true)
+        }
+        $('[name="txn_id"]').on('keyup', function() {
+            if ($(this).val().length == 0) {
+                $('button').attr('disabled', true)
+            } else {
+                $('button').attr('disabled', false)
+            }
+        })
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = new fabric.Canvas('canvas');
+            let uploadedImage;
+
+            document.getElementById('uploadInput').addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                fabric.Image.fromURL(URL.createObjectURL(file), (img) => {
+                    const maxWidth = 400; // Maximum width of the canvas
+                    const maxHeight = 400; // Maximum height of the canvas
+                    const ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
+
+                    uploadedImage = img.set({
+                        scaleX: ratio,
+                        scaleY: ratio,
+                        left: (maxWidth - img.width * ratio) / 2,
+                        top: (maxHeight - img.height * ratio) / 2,
+                    });
+                    canvas.clear().add(uploadedImage);
+                });
+            });
+
+            document.getElementById('saveBtn').addEventListener('click', () => {
+                if (uploadedImage) {
+                    const editedImageData = canvas.toDataURL({
+                        format: 'jpeg',
+                        quality: 0.8
+                    });
+                    document.getElementById('editedImageData').value = editedImageData;
+                    document.getElementsByClassName('preview_image')[0].src = editedImageData;
+                    $('#imageEditorModal').modal('hide');
+                }
+            });
+        });
     </script>
 </body>
 

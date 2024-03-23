@@ -40,11 +40,11 @@ class FrontendController extends Controller
         $data = $request->all();
         $fdata = [];
         $fdata['form_type'] = $data['form_type'];
+        // dd($data);
+        // $fileName = time() . '.' . $request->Upload_Photo->extension();
+        // $request->Upload_Photo->move(public_path('uploads'), $fileName);
 
-        $fileName = time() . '.' . $request->Upload_Photo->extension();
-        $request->Upload_Photo->move(public_path('uploads'), $fileName);
-
-        $data['Upload_Photo'] = $fileName;
+        // $data['Upload_Photo'] = $fileName;
 
         unset($data['_token']);
         $fdata['form_data'] = json_encode($data);
