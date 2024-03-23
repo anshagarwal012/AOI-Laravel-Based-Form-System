@@ -104,6 +104,7 @@
                 $('button').attr('disabled', false)
             }
         })
+        document.getElementsByClassName('preview_image')[0].style.display = 'none';
         document.addEventListener('DOMContentLoaded', () => {
             const canvas = new fabric.Canvas('canvas');
             let uploadedImage;
@@ -135,6 +136,7 @@
                     });
                     document.getElementById('editedImageData').value = editedImageData;
                     document.getElementsByClassName('preview_image')[0].src = editedImageData;
+                    document.getElementsByClassName('preview_image')[0].style.display = 'inline';
                     $('#imageEditorModal').modal('hide');
                 }
             });

@@ -96,7 +96,7 @@
             <p style="top:{{ $item['top'] }};left:{{ $item['left'] }}">{{ $item['data'] }}</p>
         @endforeach
         <p class="Upload_Photo">
-            <img src="{{ $item['images'] }}">
+            <img src="{{ $da['images'] }}">
         </p>
     </div>
     <div class="reports">
