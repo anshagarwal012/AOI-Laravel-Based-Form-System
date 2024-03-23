@@ -32,7 +32,7 @@
                             @foreach ($data as $key => $value)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
-                                    <td><img src="{{ '../uploads/' . ($value->Upload_Photo ?? '') }}" width="60"></td>
+                                    <td><img src="{{ $value->Upload_Photo }}" width="60"></td>
                                     {{-- <td>{{ $key+1 }}</td> --}}
                                     <td>{{ $value->Profession_name1 ?? '' }}</td>
                                     <td>{{ $value->address1 ?? '' }}</td>

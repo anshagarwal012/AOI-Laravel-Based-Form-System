@@ -35,7 +35,6 @@
                             <div class="col-md-2 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="name_profession" id="" class="form-control">
-                                        <option value="Prof">Prof.</option>
                                         <option value="Dr">Dr.</option>
                                     </select>
                                 </div>
