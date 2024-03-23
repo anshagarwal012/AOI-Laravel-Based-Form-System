@@ -75,7 +75,7 @@
             <p style="top:{{ $item['top'] }};left:{{ $item['left'] }}">{{ $item['data'] }}</p>
         @endforeach
         <p class="Upload_Photo">
-            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(url('uploads/' . $da['images']))) }}">
+            <img src="{{ $item['images'] }}">
         </p>
     </div>
     <div class="reports">

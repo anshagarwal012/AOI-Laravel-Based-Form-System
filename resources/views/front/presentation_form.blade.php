@@ -24,7 +24,9 @@
                 <div class="form-group">
                     <label class="form-label">Upload Photo</label>
                     <div class="form-control-wrap">
-                        <input type="file" class="form-control" required name="Upload Photo">
+                        <input type="hidden" class="form-control" name="Upload Photo" id="editedImageData" required>
+                        <input type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#imageEditorModal" value="Upload Image">
+                        <img src="" class="img-fluid preview_image" style="width:100px;height:100px">
                     </div>
                 </div>
                 <div class="form-group">
