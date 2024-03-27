@@ -28,7 +28,7 @@
                                 </li> --}}
                                 <li class="nk-menu-item">
                                     <a href="/admin/registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Registration Form/Application Form</span>
+                                        <span class="nk-menu-text">Registration Form/Application</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
@@ -53,7 +53,7 @@
                                 </li>
                                 <li class="nk-menu-item">
                                     <a href="/admin/search-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Search Form</span>
+                                        <span class="nk-menu-text">All Form</span>
                                     </a>
                                 </li>
                             </ul>
