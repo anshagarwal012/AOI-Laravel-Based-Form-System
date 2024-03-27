@@ -51,6 +51,11 @@
                                         <span class="nk-menu-text">Diplomate Form</span>
                                     </a>
                                 </li>
+                                <li class="nk-menu-item">
+                                    <a href="/admin/search-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Search Form</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div><!-- .nk-header-wrap -->
