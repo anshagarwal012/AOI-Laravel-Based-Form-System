@@ -71,6 +71,8 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
+                                            {{-- <input type="button" class="btn btn-primary" id="zoomInBtn" value="Zoom In">
+                                            <input type="button" class="btn btn-primary" id="zoomOutBtn" value="Zoom Out"> --}}
                                             <input type="button" class="btn btn-primary" id="saveBtn" value="Upload">
                                         </div>
                                     </div>
@@ -106,17 +108,19 @@
                 $('button').attr('disabled', false)
             }
         })
+        document.getElementsByClassName('preview_image')[0].style.display = 'none';
         document.addEventListener('DOMContentLoaded', () => {
             const canvas = new fabric.Canvas('canvas');
             let uploadedImage;
+            let zoomLevel = 1;
 
             document.getElementById('uploadInput').addEventListener('change', (e) => {
                 const file = e.target.files[0];
                 if (!file) return;
 
                 fabric.Image.fromURL(URL.createObjectURL(file), (img) => {
-                    const maxWidth = 400; // Maximum width of the canvas
-                    const maxHeight = 400; // Maximum height of the canvas
+                    const maxWidth = 250; // Maximum width of the canvas
+                    const maxHeight = 250; // Maximum height of the canvas
                     const ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
 
                     uploadedImage = img.set({
@@ -137,9 +141,26 @@
                     });
                     document.getElementById('editedImageData').value = editedImageData;
                     document.getElementsByClassName('preview_image')[0].src = editedImageData;
+                    document.getElementsByClassName('preview_image')[0].style.display = 'inline';
                     $('#imageEditorModal').modal('hide');
                 }
             });
+
+            // document.getElementById('zoomInBtn').addEventListener('click', () => {
+            //     if (uploadedImage) {
+            //         zoomLevel += 0.1;
+            //         uploadedImage.scaleX = uploadedImage.scaleY = zoomLevel;
+            //         canvas.renderAll();
+            //     }
+            // });
+
+            // document.getElementById('zoomOutBtn').addEventListener('click', () => {
+            //     if (uploadedImage) {
+            //         zoomLevel -= 0.1;
+            //         uploadedImage.scaleX = uploadedImage.scaleY = zoomLevel;
+            //         canvas.renderAll();
+            //     }
+            // });
         });
     </script>
 </body>

@@ -33,7 +33,7 @@
                             @foreach ($data as $key => $value)
                                 <tr>
                                     <td>{{ 'M-' . ((int) $key + 100) }}</td>
-                                    <td><img src="{{ '../uploads/' . ($value->Upload_Photo ?? '') }}" width="60"></td>
+                                    <td><img src="{{ $value->Upload_Photo }}" width="60"></td>
                                     {{-- <td>{{ $key+1 }}</td> --}}
                                     <td>{{ $value->Membership ?? '' }}</td>
                                     <td>{{ $value->AccompanyingPersonsProfessionname1 ?? '' }}</td>
