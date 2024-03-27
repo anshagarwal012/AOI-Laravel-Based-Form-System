@@ -31,12 +31,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="namecategory" placeholder="Full Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="form-label">Tittle of the Presentation</label>
                         <div class="form-control-wrap">
                             <input type="text" class="form-control" name="Tittle_Presentation"
