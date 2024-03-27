@@ -27,13 +27,8 @@
                                     </a>
                                 </li> --}}
                                 <li class="nk-menu-item">
-                                    <a href="/admin/diplomate-registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Diplomate Registration Form</span>
-                                    </a>
-                                </li>
-                                <li class="nk-menu-item">
-                                    <a href="/admin/fellowship-registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Fellowship Registration Form</span>
+                                    <a href="/admin/registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
@@ -44,6 +39,11 @@
                                 <li class="nk-menu-item">
                                     <a href="/admin/presentation-form" class="nk-menu-link">
                                         <span class="nk-menu-text">Presentation Form</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="/admin/fellowship-registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Fellowship Registration Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
