@@ -184,6 +184,7 @@
                             target="_blank">
                             <img src="{{ asset('images/Registration Form QR.png') }}" class="w-100 text-center">
                         </a>
+                        <h3 class="text-dark text-center">11487659@cbin</h3>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Transaction Id</label>

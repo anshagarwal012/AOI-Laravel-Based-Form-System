@@ -23,7 +23,7 @@
                             <ul class="nk-menu nk-menu-main ui-s2">
                                 <li class="nk-menu-item">
                                     <a href="/registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Registration Form/Application Form</span>
+                                        <span class="nk-menu-text">Registration Form/Application</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
