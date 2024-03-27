@@ -31,12 +31,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="namecategory" placeholder="Full Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="form-label">Membership No.</label>
                         <div class="form-control-wrap">
                             <input type="text" class="form-control" name="Membership" placeholder="Membership No">
@@ -49,6 +43,8 @@
                                 <div class="form-control-wrap">
                                     <select name="AccompanyingPersonsProfession1" class="form-control">
                                         <option value="Dr" selected>Dr.</option>
+                                        <option value="Mr">Mr.</option>
+                                        <option value="Ms">Mrs.</option>
                                     </select>
                                 </div>
                             </div>

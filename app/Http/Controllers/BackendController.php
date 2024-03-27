@@ -78,7 +78,75 @@ class BackendController extends Controller
             return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
         }
     }
+    public function search_form()
+    {
+        $data = $this->get_all_forms();
+        if ($this->check_login()) {
+            // dd($this->data);
+            return view('backend.search_form')->with('data', $data);
+        } else {
+            return redirect()->route('login')->with('errors', 'Login To Access Registration Form');
+        }
+    }
 
+    public function get_all_forms()
+    {
+        $results = Forms::select('form_data', 'id', 'form_type')->get();
+        $data = $results->map(function ($item) {
+            $arr = [];
+            $da = json_decode($item->form_data);
+            switch ($item->form_type) {
+                case 'diplomate_registration_form':
+                    $arr = [
+                        'id' => $item->id,
+                        'name' => $da->Profession_name1,
+                        'email' => $da->Email,
+                        'phone' => $da->MobileNumber,
+                        'prefix' => 'd',
+                    ];
+                    break;
+                case 'fellowship_registration_form':
+                    $arr = [
+                        'id' => $item->id,
+                        'name' => $da->Profession_name1,
+                        'email' => $da->Email,
+                        'phone' => $da->MobileNumber,
+                        'prefix' => 'f',
+                    ];
+                    break;
+                case 'membership_form':
+                    $arr = [
+                        'id' => $item->id,
+                        'name' => $da->AccompanyingPersonsProfessionname1,
+                        'email' => $da->Email,
+                        'phone' => $da->MobileNumber,
+                        'prefix' => 'm',
+                    ];
+                    break;
+                case 'registration_form':
+                    $arr = [
+                        'id' => $item->id,
+                        'name' => $da->AccompanyingPersonsProfessionname1,
+                        'email' => $da->Email,
+                        'phone' => $da->MobileNumber,
+                        'prefix' => 'r',
+                    ];
+                    break;
+                case 'presentation_form':
+                    $arr = [
+                        'id' => $item->id,
+                        'name' => $da->Name_author,
+                        'email' => $da->Email,
+                        'phone' => $da->MobileNumber,
+                        'prefix' => 'p',
+                    ];
+                    break;
+            }
+            // $da->id = $item->id;
+            return $arr;
+        });
+        return $data;
+    }
 
     public function showLoginForm()
     {

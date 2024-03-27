@@ -31,6 +31,7 @@ Route::controller(BackendController::class)->group(function () {
         Route::get('/membership-form', 'membership_form');
         Route::get('/registration-form', 'registration_form');
         Route::get('/presentation-form', 'presentation_form');
+        Route::get('/search-form', 'search_form');
     });
 });
 
