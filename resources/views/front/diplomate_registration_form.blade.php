@@ -25,7 +25,8 @@
                         <label class="form-label">Upload Photo</label>
                         <div class="form-control-wrap">
                             <input type="hidden" class="form-control" name="Upload Photo" id="editedImageData" required>
-                            <input type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#imageEditorModal" value="Upload Image">
+                            <input type="button" class="btn btn-primary mr-2" data-toggle="modal"
+                                data-target="#imageEditorModal" value="Upload Image">
                             <img src="" class="img-fluid preview_image" style="width:100px;height:100px">
                         </div>
                     </div>
@@ -37,7 +38,7 @@
                                     <select name="AccompanyingPersonsProfession1" class="form-control">
                                         <option value="Dr" selected>Dr.</option>
                                         <option value="Mr">Mr.</option>
-                                        <option value="Ms">Ms.</option>
+                                        <option value="Ms">Mrs.</option>
                                     </select>
                                 </div>
                             </div>
