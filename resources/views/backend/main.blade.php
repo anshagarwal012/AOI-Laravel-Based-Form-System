@@ -28,7 +28,7 @@
                                 </li> --}}
                                 <li class="nk-menu-item">
                                     <a href="/admin/registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Registration Form</span>
+                                        <span class="nk-menu-text">Registration Form/Application Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
