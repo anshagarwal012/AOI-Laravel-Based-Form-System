@@ -41,6 +41,11 @@
                                         <span class="nk-menu-text">Fellowship Registration Form</span>
                                     </a>
                                 </li>
+                                <li class="nk-menu-item">
+                                    <a href="/fellowship-registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Fellowship Registration Form</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div><!-- .nk-header-wrap -->
