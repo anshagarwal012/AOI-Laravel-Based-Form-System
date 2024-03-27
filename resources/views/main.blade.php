@@ -17,7 +17,7 @@
                 <div class="container-fluid">
                     <div class="nk-header-wrap pb-0">
                         <div class="nk-header-brand">
-                            <img src="{{ asset('/images/logo.png') }}" width="80" height="40" alt="Logo">
+                            <img src="{{ asset('/images/logo.png') }}" width="300" alt="Logo">
                         </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
