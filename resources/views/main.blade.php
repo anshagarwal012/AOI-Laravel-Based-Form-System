@@ -22,13 +22,8 @@
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <ul class="nk-menu nk-menu-main ui-s2">
                                 <li class="nk-menu-item">
-                                    <a href="/diplomate-registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Diplomate Registration Form</span>
-                                    </a>
-                                </li>
-                                <li class="nk-menu-item">
-                                    <a href="/fellowship-registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Fellowship Registration Form</span>
+                                    <a href="/registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Registration Form/Application Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
@@ -37,13 +32,13 @@
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/registration-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Registration Form</span>
+                                    <a href="/presentation-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Presentation Form</span>
                                     </a>
                                 </li>
                                 <li class="nk-menu-item">
-                                    <a href="/presentation-form" class="nk-menu-link">
-                                        <span class="nk-menu-text">Presentation Form</span>
+                                    <a href="/fellowship-registration-form" class="nk-menu-link">
+                                        <span class="nk-menu-text">Fellowship Registration Form</span>
                                     </a>
                                 </li>
                             </ul>
@@ -56,14 +51,16 @@
                     <div class="nk-content-inner">
                         <div class="nk-content-body">
                             @yield('content')
-                            <div class="modal fade" id="imageEditorModal" tabindex="-1" role="dialog" aria-labelledby="imageEditorModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="imageEditorModal" tabindex="-1" role="dialog"
+                                aria-labelledby="imageEditorModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-sm" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="imageEditorModalLabel">Image Editor</h5>
                                         </div>
                                         <div class="modal-body">
-                                            <input type="file" class="form-control" id="uploadInput" accept="image/*">
+                                            <input type="file" class="form-control" id="uploadInput"
+                                                accept="image/*">
                                             <div id="canvas-container">
                                                 <canvas id="canvas" width="200" height="200"></canvas>
                                             </div>
