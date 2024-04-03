@@ -28,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                          @foreach ($data as $key => $value)
+                            @foreach ($data as $key => $value)
                                 <tr>
                                     <td>{{ 'R-' . ((int) $key + 100) }}</td>
                                     <td><img src="{{ '../uploads/' . ($value->Upload_Photo ?? '') }}" width="60"></td>
@@ -39,7 +39,7 @@
                                     <td>{{ $value->address1 ?? '' }}</td>
                                     <td>{{ $value->City ?? '' }}</td>
                                     <td>{{ $value->State ?? '' }}</td>
-                                    <td>{{ $value->txn_id ?? '' }}</td>
+                                    <td><img src="{{ $value->txn_id }}" width="60"></td>
                                     <td><a target="_blank" href="/download-form/{{ $value->id }}"
                                             class="btn btn-primary">Download</a></td>
                                 </tr>

@@ -153,10 +153,9 @@
                         <h3 class="text-dark text-center">11487659@cbin</h3>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Transaction Id</label>
+                        <label class="form-label">Upload Payment Screenshot</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="txn_id"
-                                placeholder="Enter Transaction Id">
+                            <input type="file" class="form-control" name="txn_id" required>
                         </div>
                     </div>
                     <div class="form-group">
