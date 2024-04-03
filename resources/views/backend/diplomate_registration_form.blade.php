@@ -41,7 +41,7 @@
                                     <td>{{ $value->State ?? '' }}</td>
                                     <td>{{ $value->MobileNumber ?? '' }}</td>
                                     <td>{{ $value->Email ?? '' }}</td>
-                                    <td>{{ $value->txn_id ?? '' }}</td>
+                                    <td><img src="{{ $value->txn_id }}" width="60"></td>
                                     <td><a target="_blank" href="/download-form/{{ $value->id }}"
                                             class="btn btn-primary">Download</a></td>
                                 </tr>
