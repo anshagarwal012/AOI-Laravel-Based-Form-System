@@ -99,15 +99,15 @@
     <script src="{{ asset('/js/scripts.js') }}"></script>
     <script>
         /*if ($('[name="txn_id"]').length != 0) {
-                $('button').attr('disabled', true)
-            }
-            $('[name="txn_id"]').on('keyup', function() {
-                if ($(this).val().length == 0) {
                     $('button').attr('disabled', true)
-                } else {
-                    $('button').attr('disabled', false)
                 }
-            })*/
+                $('[name="txn_id"]').on('keyup', function() {
+                    if ($(this).val().length == 0) {
+                        $('button').attr('disabled', true)
+                    } else {
+                        $('button').attr('disabled', false)
+                    }
+                })*/
         document.getElementsByClassName('preview_image')[0].style.display = 'none';
         document.addEventListener('DOMContentLoaded', () => {
             const canvas = new fabric.Canvas('canvas');
