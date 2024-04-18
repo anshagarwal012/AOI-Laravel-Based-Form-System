@@ -56,10 +56,10 @@
                                 <div class="form-control-wrap">
                                     <select name="Conference" id="" class="form-control">
                                         <option value="Precongress">Pre-congress course only</option>
-                                        <option value="Aoilife">Aoi life membership only</option>
+                                        <option value="Aoilifemembership">Aoi life membership only</option>
                                         <option value="fellow">Fellowship Only</option>
-                                        <option value="diplomate">Diplomate Only</option>
-                                        <option value="spot">Spot Registration</option>
+                                        <option value="Diplomate">Diplomate Only</option>
+                                        <option value="SpotRegistration">Spot Registration</option>
                                         <option value="Banquet">Banquet only</option>
                                     </select>
                                 </div>
