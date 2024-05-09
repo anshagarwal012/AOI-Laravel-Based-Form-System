@@ -55,6 +55,33 @@
                             <div class="col-md-2 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="Conference" id="" class="form-control">
+                                        <option value="AOIMemberswithPre-CongressCoursewithoutBanquet">AOI Members with
+                                            Pre-Congress Course without Banquet</option>
+                                        <option value="AOIMemberswithPre-CongressCoursewithBanquet">AOI Members with
+                                            Pre-Congress Course with Banquet</option>
+                                        <option value="AOINonMemberswithPre-CongressCoursewithoutBanquet">AOI Non Members
+                                            with Pre-Congress Course without Banquet</option>
+                                        <option value="AOINonMemberswithPre-CongressCoursewithBanquet">AOI Non Members with
+                                            Pre-Congress Course with Banquet</option>
+                                        <option value="AOINonMemberswithPre-CongressCoursewithoutBanquet&AOILifeMembership">
+                                            AOI Non Members with Pre-Congress Course without Banquet & AOI Life Membership
+                                        </option>
+                                        <option value="AOINonMemberswithBanquetwithPre-CongressCourse&AOILifeMembership">AOI
+                                            Non Members with Banquet with Pre-Congress Course & AOI Life Membership</option>
+                                        <option
+                                            value="AOINonMemberswithBanquetwithPre-CongressCourse,AOILifeMembershipandFellowship">
+                                            AOI Non Members with Banquet with Pre-Congress Course, AOI Life
+                                            Membership and Fellowship</option>
+                                        <option value="AOIMemberswithPre-CongressCourseBanquetandDiplomate">AOI Members with
+                                            Pre-Congress Course Banquet and Diplomate</option>
+                                        <option value="PGStudentswithPre-CongressCoursewithoutBanquet">PG Students with
+                                            Pre-Congress Course without Banquet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            {{-- <div class="col-md-2 pr-0">
+                                <div class="form-control-wrap">
+                                    <select name="Conference" id="" class="form-control">
                                         <option value="Precongress">Pre-congress course only</option>
                                         <option value="Aoilifemembership">Aoi life membership only</option>
                                         <option value="fellow">Fellowship Only</option>
@@ -63,7 +90,7 @@
                                         <option value="Banquet">Banquet only</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="form-group">
