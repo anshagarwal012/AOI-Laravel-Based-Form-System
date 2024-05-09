@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label class="form-label">Conference Registration Charges</label>
                         <div class="row">
-                            <div class="col-md-2 pr-0">
+                            <div class="col-md-8 pr-0">
                                 <div class="form-control-wrap">
                                     <select name="Conference" id="" class="form-control">
                                         <option value="AOIMemberswithPre-CongressCoursewithoutBanquet">AOI Members with
