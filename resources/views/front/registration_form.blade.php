@@ -76,6 +76,12 @@
                                             Pre-Congress Course Banquet and Diplomate</option>
                                         <option value="PGStudentswithPre-CongressCoursewithoutBanquet">PG Students with
                                             Pre-Congress Course without Banquet</option>
+                                        <option value="Precongress">Pre-congress course only</option>
+                                        <option value="Aoilifemembership">Aoi life membership only</option>
+                                        <option value="fellow">Fellowship Only</option>
+                                        <option value="Diplomate">Diplomate Only</option>
+                                        <option value="SpotRegistration">Spot Registration</option>
+                                        <option value="Banquet">Banquet only</option>
                                     </select>
                                 </div>
                             </div>
